@@ -3,160 +3,326 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>셔츠룸 - 마포/합정 비즈니스 셔츠룸 가이드</title>
+  <title>마포의 푸른 밤, 그리고 실패하지 않는 2차 셔츠룸 동선 매뉴얼</title>
+  <meta name="description" content="지난 금요일 나는 최악의 선택을 했다. 마포 공덕 바닥에서 길을 헤매며 배운, 로컬 맛집·카페 연계 2차 셔츠룸 정찰제 동선 완벽 매뉴얼 가이드.">
+  <link rel="canonical" href="https://hwagogshirtsroom.com">
+  <meta name="bpaas-design-system" content="midnight-glass">
+  <meta name="bpaas-design-theme" content="kr-purple">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "마포 강서 셔츠룸 럭셔리 다크 가이드",
+    "url": "https://hwagogshirtsroom.com",
+    "telephone": "010-6279-0862",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "마포 공덕"
+    }
+  }
+  </script>
   <style>
-    
     :root {
-      --bg: #0a0a0b;
-      --fg: #f5f5f0;
-      --dim: #8e8e93;
-      --accent: #c5a880;
-      --card-bg: #121214;
-      --border: rgba(197, 168, 128, 0.15);
-      --font: 'Georgia', serif;
+      --primary: #0d1117;
+      --accent: #635bff;
+      --font: 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --bg: #090a0f;
+      --text: #c9d1d9;
+      --glass: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.08);
     }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: var(--bg);
-      color: var(--fg);
       font-family: var(--font);
-      margin: 0;
-      padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
       line-height: 1.8;
+      letter-spacing: 0.02em;
     }
-    .container {
+    .l-container-800 {
       max-width: 800px;
       margin: 0 auto;
-      padding: 4rem 1.5rem;
+      padding: 0 24px;
     }
-    .hero {
-      padding: 5rem 0 3rem 0;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 3.5rem;
+    header {
+      background: rgba(9, 10, 15, 0.7);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--glass-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    .hero-title {
-      font-size: 3rem;
-      font-weight: 400;
-      color: var(--fg);
-      margin-bottom: 1rem;
-      letter-spacing: -0.03em;
-      line-height: 1.2;
+    .l-nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
     }
-    .hero-subtitle {
-      font-size: 0.85rem;
-      font-family: monospace;
+    .l-logo {
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+    nav { display: flex; gap: 24px; }
+    nav a {
+      color: #8b949e;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 300;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #fff; }
+    .l-hero {
+      padding: 140px 0 80px 0;
+      text-align: center;
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .l-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 200;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+    .l-hero p {
+      font-size: 1.1rem;
+      color: #8b949e;
+      max-width: 640px;
+      margin: 0 auto 32px auto;
+      font-weight: 300;
+    }
+    .l-hero-meta {
+      font-size: 0.8rem;
       color: var(--accent);
       text-transform: uppercase;
-      letter-spacing: 0.3em;
+      letter-spacing: 0.2em;
+      margin-bottom: 16px;
+      font-weight: 500;
     }
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      padding: 2.5rem;
-      margin-bottom: 2.5rem;
-    }
-    .card h2 {
-      margin-top: 0;
-      font-family: 'Georgia', serif;
-      font-weight: 400;
-      color: var(--accent);
-      font-size: 1.6rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      margin-bottom: 2.5rem;
-    }
-    .link-t1 {
-      color: var(--accent);
+    .l-cta {
+      display: inline-block;
+      padding: 12px 36px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 4px;
+      font-weight: 500;
       text-decoration: none;
-      border-bottom: 1px dashed var(--accent);
-      font-weight: bold;
+      font-size: 0.95rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: background 0.3s, transform 0.3s;
     }
-    .link-t1:hover {
-      color: #ffffff;
-      border-bottom-style: solid;
+    .l-cta:hover {
+      background: #5046e5;
+      transform: translateY(-1px);
     }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 3rem 0;
+    section { padding: 90px 0; border-bottom: 1px solid var(--glass-border); }
+    .l-section-title {
+      font-size: 1.8rem;
+      font-weight: 200;
+      color: #fff;
+      margin-bottom: 40px;
       text-align: center;
-      color: var(--dim);
-      font-size: 0.85rem;
+      letter-spacing: 0.05em;
     }
-      `;
-      visualHero = `
-      <div class="hero">
-        <p class="hero-subtitle">— PREMIUM PORTFOLIO EDITORIAL</p>
-        <h1 class="hero-title">마포/합정 비즈니스 셔츠룸 가이드</h1>
-      </div>
-    .post-link {
-      display: block;
-      color: var(--accent);
-      text-decoration: none;
-      margin-bottom: 0.8rem;
+    .l-narrative-p {
       font-size: 1.05rem;
+      color: #8b949e;
+      margin-bottom: 32px;
+      font-weight: 300;
+      text-align: justify;
     }
-    .post-link:hover {
-      text-decoration: underline;
+    .l-narrative-p strong {
+      color: #fff;
+      font-weight: 400;
     }
-    .testimonial-box {
-      border-left: 3px solid var(--accent);
-      background: rgba(255, 255, 255, 0.02);
-      padding: 1rem 1.5rem;
-      margin-bottom: 1.5rem;
+    .l-glass-card {
+      background: var(--glass);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--glass-border);
+      border-radius: 4px;
+      padding: 40px;
+      margin-bottom: 32px;
     }
-    .reviewer-name {
-      display: block;
+    .l-glass-card h3 {
+      font-size: 1.3rem;
+      color: #fff;
+      font-weight: 300;
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+    .l-route-step {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .l-route-num {
+      font-size: 1.5rem;
+      font-weight: 200;
+      color: var(--accent);
+      font-family: monospace;
+    }
+    .l-route-text h4 { color: #fff; font-weight: 400; margin-bottom: 6px; }
+    .l-route-text p { font-size: 0.95rem; color: #8b949e; font-weight: 300; }
+    .l-review {
+      border-left: 1px solid var(--glass-border);
+      padding-left: 24px;
+      margin-bottom: 32px;
+    }
+    .l-review-meta {
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .l-review p { font-size: 0.95rem; color: #8b949e; font-style: italic; }
+    footer {
+      background: #090a0f;
+      padding: 80px 0 40px 0;
       font-size: 0.85rem;
-      color: var(--dim);
-      margin-top: 0.5rem;
-      text-align: right;
+      color: #586069;
+    }
+    .l-footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+    .l-footer-col h4 {
+      color: #fff;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+    .l-footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid var(--glass-border);
+      padding-top: 30px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .l-footer-links a { color: #586069; text-decoration: none; margin-left: 16px; }
+    .l-footer-links a:hover { color: #fff; }
+    @media(max-width: 768px) {
+      .l-hero h1 { font-size: 2rem; }
+      .l-hero { padding: 100px 0 60px 0; }
+      .l-glass-card { padding: 24px; }
     }
   </style>
+<meta property="og:image" content="og-image.svg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-  <div class="container">
-    
+  <header>
+    <div class="l-container-800 l-nav-wrap">
+      <a href="/" class="l-logo">MAPO BLUE <span>2ND COURSE</span></a>
+      <nav>
+        <a href="#story">최악의 선택</a>
+        <a href="#route">맛집-2차 동선</a>
+        <a href="#reviews">안심 후기</a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="card">
-      <h2>소개 및 비전</h2>
-      <p>본 포털은 마포 로컬 중심의 셔츠룸와 관련해 소비자들에게 절대적으로 필요한 정보를 100% 정찰제 가격 정보와 예약 에티켓 기준으로 분석하여 서비스합니다.</p>
-      <p>마포/합정 비즈니스 셔츠룸 가이드를 찾는 비즈니스 바이어나 개인 고객들이 현명하고 합리적인 조건 하에 안심하고 플레이스를 선택하실 수 있도록 가이드를 성실히 업데이트합니다.</p>
-    </section>
-
-    
-    <!-- T1 Premium Layout Content (Major / Minor posts + Reviews) -->
-    <div class="grid">
-      <div class="card">
-        <h2>🔥 메이저 키워드 스페셜 포스트</h2>
-        <p><b>주제: 마포/합정 비즈니스 셔츠룸 가이드 완벽 가이드 및 최상위 랭킹 전략</b></p>
-        <p>도심 내에서 가장 많은 검색 트래픽과 관심을 이끌어내고 있는 대표 키워드인 마포/합정 비즈니스 셔츠룸 가이드의 구조적 가성비 코스를 단락별로 조명합니다. 사전 예약 시 특별 혜택을 받는 절차와 공식적으로 보증된 다이렉트 통신 방안을 체계적으로 숙지하시어, 첫 방문에서의 실책을 사전에 철저히 방지해보시길 당부드립니다.</p>
-      </div>
-      <div class="card">
-        <h2>💡 마이너 롱테일 보강 포스트</h2>
-        <p><b>주제: 마포 룸 예약 시 실패하지 않는 미세 팁</b></p>
-        <p>눈에 직접적으로 드러나지 않는 마이너 롱테일 조건인 투명 정찰제 테이블의 실시간 검증 데이터를 확인하세요. 단골 단체 고객들이 암묵적으로 활용하고 있는 VIP 서포터 혜택 매핑과 피크 타임 대기 버퍼 제어 방안 등 1%의 세부 체크리스트 정보가 깔끔하게 수록되어 있습니다.</p>
-      </div>
+  <main class="l-container-800">
+    <div class="l-hero">
+      <div class="l-hero-meta">NARRATIVE GUIDE FOR GENTLEMEN</div>
+      <h1>지난 금요일, 나는 최악의 선택을 하고 마포 바닥을 방황했다</h1>
+      <p>가장 가까운 지인들을 대접하는 중요한 자리, 검증되지 않은 호객 행위에 휘말려 비싼 요금을 치르고 불쾌함을 겪은 뒤 펜을 들었습니다. 마포의 2차 코스를 완전히 구제할 로컬 명문 매뉴얼을 제시합니다.</p>
+      <a href="#route" class="l-cta">안심 2차 동선 가이드 열람</a>
     </div>
 
-    <section class="card">
-      <h2>⭐ 고객들의 생생한 리얼 후기 & 추천글</h2>
+    <section id="story">
+      <h2 class="l-section-title">One Friday Night</h2>
+      <p class="l-narrative-p">지난 금요일 밤, 외국계 금융사에 다니는 중요한 비즈니스 파트너들과 마포 공덕역 인근에서 식사를 마쳤습니다. 1차에서 최고의 한우 갈비를 대접하며 분위기는 무르익었지만, 2차 코스가 화근이었습니다. 길거리의 어설픈 호객꾼에게 낚여 아무 정보도 없는 인근 지하 룸으로 들어갔던 겁니다. 메뉴판도 없는 상태에서 계산서에 얹혀 나온 황당한 유통비와 옵션 요금은 저를 파트너들 앞에서 낯 뜨겁게 만들었습니다. 그 최악의 경험 이후, 저는 마포와 공덕의 숨겨진 로컬 맛집들과 연동되어 **100% 정찰제로 투명하게 작동하는 안전한 2차 셔츠룸 힐링 코스**를 뼈저리게 설계하게 되었습니다.</p>
       
-      <div class="testimonial-box">
-        <p>"마포 인근에서 손님 접대용으로 예약하려고 가격이랑 룸 크기를 엄청 찾았었는데, 여기서 고정 금액표 보고 완전 만족해서 예약 성공했습니다! 덤탱이 걱정 없이 믿고 가도 되네요."</p>
-        <span class="reviewer-name">- 마포구 서강동 김*혁 사장님 (30대 비즈니스맨)</span>
+      <div class="l-glass-card">
+        <h3>💡 마포 2차 정찰제의 절대적 안도감</h3>
+        <p class="l-narrative-p" style="margin-bottom:0">이곳 마포 강서 셔츠룸은 어설픈 꼼수나 깜깜이 요금이 없습니다. 첫 안내 문자에서 확인한 가격표 그대로, 맥주와 음료 셔츠 체인지 케어까지 정직하고 슬림하게 통합 정산됩니다. 1차의 피로를 2차에서 불쾌함으로 배가시키지 않는, 품위 있는 리치 가이들의 마지막 힐링 안식처입니다.</p>
       </div>
-      <div class="testimonial-box">
-        <p>"합정이랑 홍대 쪽에 단체 모임할 때 노래 마이크 음향 세팅 잘 된 룸 찾기가 하늘의 별 따기였는데, 세부 방음 상태 진단 보고서 보고 찾아갔더니 다들 만족해서 기뻤습니다."</p>
-        <span class="reviewer-name">- 합정동 이*진 님 (20대 정기모임 총무)</span>
-      </div>
-      
     </section>
-    
+
+<!-- SEO Visual 2: 셔츠룸 Midnight Glass Cards -->
+<div class="seo-visual-cards" role="img" aria-label="마포/합정 비즈니스 셔츠룸 가이드 셔츠룸 — 강남 셔츠룸 정보" 
+     style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin:32px 0">
+  <div style="background:rgba(20,25,35,0.65);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:32px 24px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.3)">
+    <div style="font-size:2.5em;margin-bottom:16px">👔</div>
+    <div style="font-weight:700;font-size:1.15em;color:#ffffff;letter-spacing:-0.02em">특화</div>
+    <div style="font-family:monospace;color:#94a3b8;font-size:0.75em;letter-spacing:0.1em;text-transform:uppercase;margin-top:12px">/ 마포/합정 비즈니스 셔츠룸 가이드</div>
+  </div><div style="background:rgba(20,25,35,0.65);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:32px 24px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.3)">
+    <div style="font-size:2.5em;margin-bottom:16px">🍸</div>
+    <div style="font-weight:700;font-size:1.15em;color:#ffffff;letter-spacing:-0.02em">다수 실적</div>
+    <div style="font-family:monospace;color:#94a3b8;font-size:0.75em;letter-spacing:0.1em;text-transform:uppercase;margin-top:12px">/ 마포/합정 비즈니스 셔츠룸 가이드</div>
+  </div><div style="background:rgba(20,25,35,0.65);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:32px 24px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.3)">
+    <div style="font-size:2.5em;margin-bottom:16px">✨</div>
+    <div style="font-weight:700;font-size:1.15em;color:#ffffff;letter-spacing:-0.02em">고품질</div>
+    <div style="font-family:monospace;color:#94a3b8;font-size:0.75em;letter-spacing:0.1em;text-transform:uppercase;margin-top:12px">/ 마포/합정 비즈니스 셔츠룸 가이드</div>
   </div>
+</div>
+
+    <section id="route">
+      <h2 class="l-section-title">The Perfect Route</h2>
+      <div class="l-route-step">
+        <div class="l-route-num">01</div>
+        <div class="l-route-text">
+          <h4>공덕역 로컬 맛집에서 1차 완수</h4>
+          <p>공덕역 5번 출구의 명물 족발 타운이나 갈매기 골목에서 깊은 한국 전통의 맛과 함께 편안한 반주를 즐기며 파트너의 긴장을 해소하십시오.</p>
+        </div>
+      </div>
+      <div class="l-route-step">
+        <div class="l-route-num">02</div>
+        <div class="l-route-text">
+          <h4>도보 5분 이내의 최적 셔츠룸 동선 밀착</h4>
+          <p>술이 깨지 않는 애매한 30분의 택시 이동은 동선을 끊어버립니다. 1차 장소에서 도보로 3~5분 이내에 위치한 방역 인증 셔츠룸으로 다이렉트 도보 이동을 설계합니다.</p>
+        </div>
+      </div>
+      <div class="l-route-step">
+        <div class="l-route-num">03</div>
+        <div class="l-route-text">
+          <h4>실장과의 투명한 1대1 셔츠 체인지 세션 케어</h4>
+          <p>예약 시 지명한 담당 실장의 밀착 엄호 아래, 전원 화이트 셔츠 환복 시스템(15분 내)을 투명한 기본가에 보장받으며 프라이빗 스페이스에서 깊은 비즈니스 담소를 완수합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <h2 class="l-section-title">Whispers of Trust</h2>
+      <div class="l-review">
+        <div class="l-review-meta">Anonymous Guest (Global Trade CEO)</div>
+        <p>"지난주 바이어 접대 차 마포로 갔는데, 예약 전 미리 문자로 확인받은 금액 이외에 1원도 더 청구되지 않는 완벽한 투명성에 바이어가 극찬했습니다. 클래스가 다릅니다."</p>
+      </div>
+      <div class="l-review">
+        <div class="l-review-meta">James K. (IT Developer)</div>
+        <p>"The best 2nd course manual ever. Smooth translation by the manager and clean atmosphere. Highly recommended for foreign clients who want to experience Seoul's sophisticated nightlife safely."</p>
+      </div>
+    
+<div class="seo-visual-divider" role="separator" aria-label="마포/합정 비즈니스 셔츠룸 가이드 구분선" style="margin:24px 0;display:flex;align-items:center;justify-content:center"><div style="width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent)"></div></div>
+</section>
+  </main>
+
   <footer>
-    <p>&copy; 2026 hwagogshirtsroom.com. All Rights Reserved.</p>
+    <div class="l-container-800">
+      <div class="l-footer-grid">
+        <div class="l-footer-col">
+          <h4>MAPO BLUE CLUB</h4>
+          <p>마포 공덕 권역의 프리미엄 비즈니스 접대 및 2차 동선 큐레이션을 연구하는 럭셔리 다크 매뉴얼 허브.</p>
+        </div>
+        <div class="l-footer-col">
+          <h4>ACCESS & PHONE</h4>
+          <p>마포 주요 거점 지하철역 8번 출구 인접 | 📞 예약 케어: 010-0000-0000</p>
+        </div>
+      </div>
+      <div class="l-footer-bottom">
+        <p>&copy; 2026 MAPO BLUE CLUB. All rights reserved.</p>
+        <div class="l-footer-links">
+          <a href="/privacy">이용약관</a>
+          <a href="/disclaimer">책임 고지문</a>
+        </div>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
