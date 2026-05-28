@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="bpaas-design-system" content="editorial-apple">
+  <meta name="bpaas-design-theme" content="kr-warm-grid">
+  <title>소개 | 마포 비즈니스 셔츠룸</title>
+  <style>
+    :root {
+      --bg: #fafaf8;
+      --surface: #ffffff;
+      --border: rgba(0,0,0,0.05);
+      --text-primary: #1a1a1a;
+      --text-secondary: #5c5c5c;
+      --text-tertiary: #999999;
+      --accent: #b8860b;
+      --accent-subtle: rgba(184, 134, 11, 0.08);
+      --nav-bg: rgba(255,255,255,0.85);
+      --radius-sm: 12px;
+      --radius-md: 18px;
+      --radius-lg: 24px;
+      --shadow-card: 0 2px 12px rgba(0,0,0,0.03), 0 6px 24px rgba(0,0,0,0.04);
+      --shadow-nav: 0 1px 0 rgba(0,0,0,0.04), 0 2px 16px rgba(0,0,0,0.03);
+      --font-sans: 'Pretendard', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --transition: 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 24px 48px;
+    }
+
+    .container {
+      max-width: 780px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 20px;
+      z-index: 100;
+      width: 100%;
+      max-width: 780px;
+      margin: 16px auto 8px;
+      background: var(--nav-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 40px;
+      padding: 10px 24px;
+      box-shadow: var(--shadow-nav);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid var(--border);
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+      letter-spacing: -0.2px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+    }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      background: var(--accent-subtle);
+      padding: 6px 14px;
+      border-radius: 24px;
+      width: fit-content;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    .hero .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      font-weight: 450;
+      max-width: 560px;
+      letter-spacing: -0.2px;
+    }
+
+    /* Story Section */
+    .story-block {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .story-block h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .story-block p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .story-block .highlight {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Team */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .team-card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: 28px 22px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .team-initials {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--accent-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--accent);
+      letter-spacing: -0.3px;
+    }
+
+    .team-card h3 {
+      font-size: 1.1rem;
+      font-weight: 650;
+      letter-spacing: -0.3px;
+    }
+
+    .team-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* Difference Points */
+    .diff-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .diff-item {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .diff-icon {
+      font-size: 1.8rem;
+      min-width: 40px;
+      text-align: center;
+    }
+
+    .diff-content h4 {
+      font-weight: 650;
+      font-size: 1.05rem;
+      letter-spacing: -0.3px;
+    }
+
+    .diff-content p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    /* CTA */
+    .cta-band {
+      background: var(--accent-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      border: 1px solid rgba(184, 134, 11, 0.12);
+    }
+
+    .cta-text {
+      font-weight: 650;
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+    }
+
+    .cta-btn {
+      background: var(--accent);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      letter-spacing: -0.2px;
+    }
+
+    .cta-btn:hover {
+      filter: brightness(1.08);
+      transform: translateY(-1px);
+    }
+
+    /* FAQ mini */
+    .faq-mini {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq-mini details {
+      background: var(--surface);
+      border-radius: var(--radius-sm);
+      padding: 16px 22px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+    }
+
+    .faq-mini summary {
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.95rem;
+      letter-spacing: -0.2px;
+    }
+
+    .faq-mini p {
+      margin-top: 10px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-tertiary);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0 16px 40px;
+      }
+      nav {
+        padding: 10px 18px;
+        border-radius: 30px;
+      }
+      .nav-links {
+        gap: 14px;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .story-block {
+        padding: 28px 24px;
+      }
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+      .diff-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .cta-band {
+        padding: 28px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="/" class="logo">셔츠룸 마포</a>
+      <ul class="nav-links">
+        <li><a href="index.html">홈</a></li>
+        <li><a href="intro.html" class="active" aria-current="page">소개</a></li>
+        <li><a href="guide.html">가이드</a></li>
+        <li><a href="contact.html">예약</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <span class="hero-tag">✦ Our Story</span>
+      <h1>옷장 속 비즈니스,<br>마포에서 시작되다</h1>
+      <p class="subtitle">합정동 골목 한 켠에서 우연히 만난 맞춤 양복점을 기억하시나요? 그 감촉과 정성을 셔츠 한 벌에 담아 비즈니스 공간을 다시 설계했습니다.</p>
+    </section>
+
+    <section class="story-block">
+      <h2>90년대 합정, 첫 작업실에서</h2>
+      <p>
+        저희 대표는 1998년 마포구 합정동의 작은 재단실에서 경력을 시작했습니다. 당시만 해도 주변은 인쇄소와 창고뿐이었죠. 하지만 단골 비즈니스 고객들이 하나둘 늘어나며 <span class="highlight">“마포에서도 제대로 갖춰 입고 만나는 공간이 필요하다”</span>는 공감대가 생겼어요.
+      </p>
+      <p>
+        그래서 탄생한 곳이 지금의 마포 비즈니스 셔츠룸입니다. 셔츠 칼라의 각도, 소매 길이, 천의 밀도까지 — 마치 맞춤 정장을 입듯 디테일을 챙기는 마음으로 공간을 운영하고 있습니다. 우리는 그냥 술자리가 아니라, 신뢰를 입는 자리를 만듭니다.
+      </p>
+    </section>
+
+    <section>
+      <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px;">
+        <h2 style="font-size: 1.7rem; font-weight: 700; letter-spacing: -0.5px;">함께하는 사람들</h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">마포에서 15년 이상 현장을 지켜온 베테랑 매니저들이 여러분의 비즈니스 저녁을 서포트합니다.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-initials">JK</div>
+          <h3>대표 김재경</h3>
+          <p>前 홍대 프라이빗 라운지 총괄. 20년 경력의 공간 연출 전문가. “셔츠룸은 결국 매너의 완성”이라는 철학을 고집합니다.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-initials">SW</div>
+          <h3>수석 매니저 박수완</h3>
+          <p>합정 토박이, 업장 내 모든 디테일을 책임집니다. 첫 방문 고객의 긴장을 웃음으로 풀어내는 친화력의 달인.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-initials">HJ</div>
+          <h3>주임 매니저 임희진</h3>
+          <p>서비스 기획 전공. VIP 고객 맞춤 케어를 담당하며, 섬세한 기록과 추천으로 단골을 만듭니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;">
+        <h2 style="font-size: 1.7rem; font-weight: 700; letter-spacing: -0.5px;">무엇이 다른가요?</h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">흔한 유흥이 아닌, 비즈니스 매너의 확장으로 접근합니다.</p>
+      </div>
+      <div class="diff-list">
+        <div class="diff-item">
+          <span class="diff-icon">👔</span>
+          <div class="diff-content">
+            <h4>셔츠 피팅 콘셉트</h4>
+            <p>드레스 셔츠처럼, 방문 전 선호 스타일과 분위기를 사전 상담합니다. 그래서 ‘잘 맞는 공간’이 탄생하죠.</p>
+          </div>
+        </div>
+        <div class="diff-item">
+          <span class="diff-icon">🤝</span>
+          <div class="diff-content">
+            <h4>비즈니스 프로토콜 준수</h4>
+            <p>고객 직급과 미팅 목적에 맞춰 좌석 배치와 템포를 조율합니다. 불필요한 과잉 서비스는 지양합니다.</p>
+          </div>
+        </div>
+        <div class="diff-item">
+          <span class="diff-icon">🔒</span>
+          <div class="diff-content">
+            <h4>프라이버시 철저</h4>
+            <p>합정동 단독 공간, 방문 이력 비공개 원칙. 신뢰는
+</body>
+</html>

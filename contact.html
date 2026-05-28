@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-warm-grid">
+    <title>문의 | 마포/합정 비즈니스 셔츠룸 가이드</title>
+    <style>
+        :root {
+            --bg: #fafaf8;
+            --surface: #ffffff;
+            --border: #e8e4df;
+            --text: #1c1c1c;
+            --text-secondary: #6b6560;
+            --accent: #b83a1a;
+            --accent-soft: #fdf0eb;
+            --radius: 6px;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+            --font-sans: 'Apple SD Gothic Neo', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-serif: 'Iowan Old Style', 'Noto Serif KR', Georgia, serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* 내비게이션 */
+        .nav {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 0 24px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: rgba(255,255,255,0.92);
+        }
+
+        .nav-inner {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .nav-logo {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 450;
+            transition: color 0.2s;
+            letter-spacing: -0.2px;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a.active {
+            color: var(--accent);
+            font-weight: 550;
+        }
+
+        /* 메인 레이아웃 */
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 24px 64px;
+        }
+
+        .page-header {
+            margin-bottom: 44px;
+            text-align: center;
+        }
+
+        .page-label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            font-weight: 550;
+            margin-bottom: 10px;
+        }
+
+        .page-title {
+            font-family: var(--font-serif);
+            font-size: 2.1rem;
+            font-weight: 600;
+            letter-spacing: -0.4px;
+            line-height: 1.25;
+            color: var(--text);
+        }
+
+        .page-subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-top: 10px;
+            font-weight: 420;
+            letter-spacing: -0.2px;
+        }
+
+        /* 카드 */
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 30px;
+            margin-bottom: 28px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .card-title {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 580;
+            margin-bottom: 18px;
+            letter-spacing: -0.3px;
+            color: var(--text);
+        }
+
+        .card-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 13px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            letter-spacing: -0.2px;
+        }
+
+        .card-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .card-icon {
+            flex-shrink: 0;
+            width: 20px;
+            text-align: center;
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-top: 1px;
+        }
+
+        .card-highlight {
+            color: var(--text);
+            font-weight: 530;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 0.78rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 520;
+            margin-right: 6px;
+            margin-bottom: 6px;
+            letter-spacing: -0.2px;
+        }
+
+        /* 지도 래퍼 */
+        .map-wrapper {
+            width: 100%;
+            height: 280px;
+            background: #f3f0ec;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            letter-spacing: -0.2px;
+        }
+
+        .map-placeholder {
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        .map-placeholder strong {
+            display: block;
+            color: var(--text);
+            font-weight: 550;
+            margin-bottom: 4px;
+        }
+
+        /* 폼 */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.88rem;
+            font-weight: 530;
+            margin-bottom: 6px;
+            letter-spacing: -0.2px;
+            color: var(--text);
+        }
+
+        .form-label .required {
+            color: var(--accent);
+            font-size: 0.75rem;
+            margin-left: 3px;
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 0.93rem;
+            font-family: var(--font-sans);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--bg);
+            color: var(--text);
+            transition: border-color 0.2s, box-shadow 0.2s;
+            letter-spacing: -0.2px;
+            outline: none;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(184,58,26,0.06);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .form-hint {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            margin-top: 5px;
+            letter-spacing: -0.2px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 32px;
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.93rem;
+            font-weight: 540;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            letter-spacing: -0.2px;
+            font-family: var(--font-sans);
+            transition: background 0.2s, transform 0.1s;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #a33316;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+
+        .btn-outline:hover {
+            background: var(--accent-soft);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 6px;
+        }
+
+        /* 시간 표 */
+        .time-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            letter-spacing: -0.2px;
+        }
+
+        .time-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .time-table td:last-child {
+            text-align: right;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .time-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge-closed {
+            display: inline-block;
+            background: #f5f2ef;
+            color: #9a928c;
+            font-size: 0.72rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+
+        /* 반응형 */
+        @media (max-width: 540px) {
+            .page {
+                padding: 32px 16px 48px;
+            }
+            .page-title {
+                font-size: 1.7rem;
+            }
+            .card {
+                padding: 20px 18px;
+            }
+            .nav-links {
+                gap: 16px;
+            }
+            .nav-links a {
+                font-size: 0.82rem;
+            }
+            .btn-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 내비게이션 -->
+<nav class="nav" aria-label="메인 내비게이션">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">마포셔츠룸</a>
+        <ul class="nav-links">
+            <li><a href="index.html">홈</a></li>
+            <li><a href="guide.html">가이드</a></li>
+            <li><a href="pricing.html">가격</a></li>
+            <li><a href="contact.html" class="active">문의</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- 페이지 본문 -->
+<main class="page">
+    <header class="page-header">
+        <p class="page-label">Contact</p>
+        <h1 class="page-title">문의</h1>
+        <p class="page-subtitle">마포·합정 비즈니스 셔츠룸 — 편하게 연락 주세요</p>
+    </header>
+
+    <!-- 연락처 카드 -->
+    <section class="card" aria-labelledby="contact-heading">
+        <h2 class="card-title" id="contact-heading">📞 연락처</h2>
+        <div class="card-row">
+            <span class="card-icon">📱</span>
+            <span><span class="card-highlight">050-XXXX-XXXX</span> (대표 번호)</span>
+        </div>
+        <div class="card-row">
+            <span class="card-icon">💬</span>
+            <span>카카오톡 ID: <span class="card-highlight">maposhirt_room</span></span>
+        </div>
+        <div class="card-row">
+            <span class="card-icon">📧</span>
+            <span>이메일: <span class="card-highlight">hello@maposhirt.kr</span></span>
+        </div>
+        <div style="margin-top: 14px;">
+            <span class="card-tag">실시간 상담</span>
+            <span class="card-tag">비밀 보장</span>
+            <span class="card-tag">당일 예약 가능</span>
+        </div>
+    </section>
+
+    <!-- 운영시간 카드 -->
+    <section class="card" aria-labelledby="hours-heading">
+        <h2 class="card-title" id="hours-heading">🕐 운영시간</h2>
+        <table class="time-table">
+            <tbody>
+                <tr>
+                    <td>월요일 – 목요일</td>
+                    <td>19:00 – 03:00</td>
+                </tr>
+                <tr>
+                    <td>금요일</td>
+                    <td>19:00 – 05:00</td>
+                </tr>
+                <tr>
+                    <td>토요일</td>
+                    <td>18:00 – 05:00</td>
+                </tr>
+                <tr>
+                    <td>일요일</td>
+                    <td><span class="badge-closed">정기 휴무</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="form-hint" style="margin-top: 12px;">※ 공휴일은 전날 공지해 드려요. 카톡으로 미리 확인해 주시면 가장 정확합니다.</p>
+    </section>
+
+    <!-- 오시는 길 카드 -->
+    <section class="card" aria-labelledby="location-heading">
+        <h2 class="card-title" id="location-heading">📍 오시는 길</h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 14px; letter-spacing: -0.2px;">
+            <strong class="card-highlight">서울 마포구 합정동</strong> 인근 · 합정역 3번 출구 도보 4분<br>
+            상세 주소는 예약 확정 후 문자로 안내드립니다.
+        </p>
+        <div class="map-wrapper" aria-label="합정역 주변 지도">
+            <div class="map-placeholder">
+                <strong>🗺️ 합정역 3번 출구 인근</strong>
+                예약 확정 시<br>정확한 위치를 보내드려요
+            </div>
+        </div>
+        <div style="margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
+            <span class="card-tag">🚇 합정역 3번 출구</span>
+            <span class="card-tag">🚶 도보 4분</span>
+            <span class="card-tag">🅿️ 주차 가능</span>
+            <span class="card-tag">🔒 프라이빗 입장</span>
+        </div>
+    </section>
+
+    <!-- 예약 폼 카드 -->
+    <section class="card" aria-labelledby="form-heading">
+        <h2 class="card-title" id="form-heading">📝 빠른 예약 문의</h2>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px; letter-spacing: -0.2px;">
+            아래 폼을 작성해 주시면, 확인 즉시 카카오톡으로 연락드립니다.<br>
+            보통 10분 이내에 응답해 드리고 있어요 😊
+        </p>
+        <form>
+            <div class="form-group">
+                <label class="form-label" for="name">이름 <span class="required">*</span></label>
+                <input type="text" id="name" class="form-input" placeholder="성함 또는 닉네임" required>
+</body>
+</html>
