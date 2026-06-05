@@ -2,479 +2,182 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>마포/합정 셔츠룸 문의 · 예약ᆨ · 오시는 길</title>
+    <meta name="description" content="마포/합정 셔츠룸 문의, 예약, 위치, 운영시간 안내. 10년차 동네 형이 운영하는 곳, 궁금한 건 편하게 물어보세요. 010-6279-0862">
+    <meta name="keywords" content="마포셔츠룸문의, 합정셔츠룸예약, 마포셔츠룸오시는길, 마포셔츠룸운영시간, 마포유흥문의, 010-6279-0862">
+    <meta name="telephone" content="010-6279-0862">
     <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-warm-grid">
-    <title>문의 | 마포/합정 비즈니스 셔츠룸 가이드</title>
+    <meta name="bpaas-design-theme" content="kr-mono-chrome">
+    <link rel="canonical" href="https://hwagogshirtsroom.com/contact">
+    <meta property="og:title" content="마포/합정 비즈니스 셔츠룸 문의 · 예약 · 오시는 길">
+    <meta property="og:description" content="마포/합정 셔츠룸 문의, 예약, 위치, 운영시간 안내. 10년차 동네 형이 운영하는 곳, 궁금한 건 편하게 물어보세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hwagogshirtsroom.com/contact">
+    <meta name="twitter:card" content="summary_large_image">
     <style>
-        :root {
-            --bg: #fafaf8;
-            --surface: #ffffff;
-            --border: #e8e4df;
-            --text: #1c1c1c;
-            --text-secondary: #6b6560;
-            --accent: #b83a1a;
-            --accent-soft: #fdf0eb;
-            --radius: 6px;
-            --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
-            --font-sans: 'Apple SD Gothic Neo', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-serif: 'Iowan Old Style', 'Noto Serif KR', Georgia, serif;
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #f5f5f5; color: #1a1a1a; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #1a1a1a; color: #fff; position: sticky; top: 0; z-index: 1000; }
+        .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; max-width: 1200px; margin: 0 auto; }
+        .logo { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.5px; color: #fff; text-decoration: none; }
+        .nav-links { display: flex; gap: 28px; }
+        .nav-links a { color: #ccc; text-decoration: none; font-size: 0.95rem; transition: color 0.2s; font-weight: 500; }
+        .nav-links a:hover { color: #fff; }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; background: none; border: none; padding: 4px; }
+        .hamburger span { width: 26px; height: 3px; background: #fff; border-radius: 2px; transition: 0.3s; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; width: 100%; background: #1a1a1a; padding: 20px; gap: 16px; }
+            .nav-links.active { display: flex; }
+            .hamburger { display: flex; }
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-sans);
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* 내비게이션 */
-        .nav {
-            background: var(--surface);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            padding: 0 24px;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            background: rgba(255,255,255,0.92);
-        }
-
-        .nav-inner {
-            max-width: 860px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 56px;
-        }
-
-        .nav-logo {
-            font-family: var(--font-serif);
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--text);
-            text-decoration: none;
-            letter-spacing: -0.3px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            font-weight: 450;
-            transition: color 0.2s;
-            letter-spacing: -0.2px;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        .nav-links a.active {
-            color: var(--accent);
-            font-weight: 550;
-        }
-
-        /* 메인 레이아웃 */
-        .page {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 48px 24px 64px;
-        }
-
-        .page-header {
-            margin-bottom: 44px;
-            text-align: center;
-        }
-
-        .page-label {
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--accent);
-            font-weight: 550;
-            margin-bottom: 10px;
-        }
-
-        .page-title {
-            font-family: var(--font-serif);
-            font-size: 2.1rem;
-            font-weight: 600;
-            letter-spacing: -0.4px;
-            line-height: 1.25;
-            color: var(--text);
-        }
-
-        .page-subtitle {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            margin-top: 10px;
-            font-weight: 420;
-            letter-spacing: -0.2px;
-        }
-
-        /* 카드 */
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 28px 30px;
-            margin-bottom: 28px;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .card-title {
-            font-family: var(--font-serif);
-            font-size: 1.25rem;
-            font-weight: 580;
-            margin-bottom: 18px;
-            letter-spacing: -0.3px;
-            color: var(--text);
-        }
-
-        .card-row {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 13px;
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            letter-spacing: -0.2px;
-        }
-
-        .card-row:last-child {
-            margin-bottom: 0;
-        }
-
-        .card-icon {
-            flex-shrink: 0;
-            width: 20px;
-            text-align: center;
-            color: var(--accent);
-            font-size: 0.9rem;
-            margin-top: 1px;
-        }
-
-        .card-highlight {
-            color: var(--text);
-            font-weight: 530;
-        }
-
-        .card-tag {
-            display: inline-block;
-            background: var(--accent-soft);
-            color: var(--accent);
-            font-size: 0.78rem;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-weight: 520;
-            margin-right: 6px;
-            margin-bottom: 6px;
-            letter-spacing: -0.2px;
-        }
-
-        /* 지도 래퍼 */
-        .map-wrapper {
-            width: 100%;
-            height: 280px;
-            background: #f3f0ec;
-            border-radius: var(--radius);
-            overflow: hidden;
-            border: 1px solid var(--border);
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            letter-spacing: -0.2px;
-        }
-
-        .map-placeholder {
-            text-align: center;
-            line-height: 1.7;
-        }
-
-        .map-placeholder strong {
-            display: block;
-            color: var(--text);
-            font-weight: 550;
-            margin-bottom: 4px;
-        }
-
-        /* 폼 */
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-label {
-            display: block;
-            font-size: 0.88rem;
-            font-weight: 530;
-            margin-bottom: 6px;
-            letter-spacing: -0.2px;
-            color: var(--text);
-        }
-
-        .form-label .required {
-            color: var(--accent);
-            font-size: 0.75rem;
-            margin-left: 3px;
-        }
-
-        .form-input,
-        .form-textarea,
-        .form-select {
-            width: 100%;
-            padding: 12px 14px;
-            font-size: 0.93rem;
-            font-family: var(--font-sans);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            background: var(--bg);
-            color: var(--text);
-            transition: border-color 0.2s, box-shadow 0.2s;
-            letter-spacing: -0.2px;
-            outline: none;
-        }
-
-        .form-input:focus,
-        .form-textarea:focus,
-        .form-select:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(184,58,26,0.06);
-        }
-
-        .form-textarea {
-            resize: vertical;
-            min-height: 110px;
-        }
-
-        .form-hint {
-            font-size: 0.78rem;
-            color: var(--text-secondary);
-            margin-top: 5px;
-            letter-spacing: -0.2px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 13px 32px;
-            background: var(--accent);
-            color: #fff;
-            font-size: 0.93rem;
-            font-weight: 540;
-            border: none;
-            border-radius: var(--radius);
-            cursor: pointer;
-            letter-spacing: -0.2px;
-            font-family: var(--font-sans);
-            transition: background 0.2s, transform 0.1s;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .btn:hover {
-            background: #a33316;
-        }
-
-        .btn:active {
-            transform: scale(0.97);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--accent);
-            border: 1px solid var(--accent);
-        }
-
-        .btn-outline:hover {
-            background: var(--accent-soft);
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 6px;
-        }
-
-        /* 시간 표 */
-        .time-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
-            letter-spacing: -0.2px;
-        }
-
-        .time-table td {
-            padding: 8px 0;
-            border-bottom: 1px solid var(--border);
-            color: var(--text-secondary);
-        }
-
-        .time-table td:last-child {
-            text-align: right;
-            color: var(--text);
-            font-weight: 500;
-        }
-
-        .time-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .badge-closed {
-            display: inline-block;
-            background: #f5f2ef;
-            color: #9a928c;
-            font-size: 0.72rem;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-weight: 500;
-        }
-
-        /* 반응형 */
-        @media (max-width: 540px) {
-            .page {
-                padding: 32px 16px 48px;
-            }
-            .page-title {
-                font-size: 1.7rem;
-            }
-            .card {
-                padding: 20px 18px;
-            }
-            .nav-links {
-                gap: 16px;
-            }
-            .nav-links a {
-                font-size: 0.82rem;
-            }
-            .btn-group {
-                flex-direction: column;
-            }
-        }
+        main { padding: 60px 0; }
+        h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; }
+        h2 { font-size: 1.6rem; font-weight: 600; margin-top: 48px; margin-bottom: 20px; letter-spacing: -0.01em; }
+        .subhead { font-size: 1.1rem; color: #555; margin-bottom: 40px; max-width: 640px; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px; }
+        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+        .contact-card { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+        .contact-card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 12px; }
+        .contact-card p { color: #444; margin-bottom: 8px; }
+        .contact-card .tel-link { font-size: 1.6rem; font-weight: 700; color: #1a1a1a; text-decoration: none; display: inline-block; margin-top: 8px; }
+        .contact-card .tel-link:hover { text-decoration: underline; }
+        .contact-card .hours { margin-top: 16px; border-top: 1px solid #eee; padding-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+        .contact-card .hours span { font-size: 0.95rem; color: #333; }
+        .map-container { width: 100%; height: 280px; background: #ddd; border-radius: 12px; margin-top: 20px; overflow: hidden; }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+        .faq-list { margin-top: 20px; }
+        .faq-item { border-bottom: 1px solid #e0e0e0; padding: 18px 0; }
+        .faq-item h4 { font-size: 1.05rem; font-weight: 600; margin-bottom: 6px; cursor: default; }
+        .faq-item p { color: #555; font-size: 0.95rem; }
+        .form-box { background: #fff; border-radius: 16px; padding: 36px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); margin-top: 20px; }
+        .form-box label { display: block; font-weight: 500; margin-bottom: 6px; font-size: 0.95rem; }
+        .form-box input, .form-box textarea, .form-box select { width: 100%; padding: 12px 16px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; margin-bottom: 18px; background: #fafafa; transition: border 0.2s; }
+        .form-box input:focus, .form-box textarea:focus, .form-box select:focus { border-color: #1a1a1a; outline: none; background: #fff; }
+        .form-box textarea { height: 120px; resize: vertical; }
+        .btn-submit { background: #1a1a1a; color: #fff; border: none; padding: 14px 32px; border-radius: 40px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+        .btn-submit:hover { background: #333; }
+        .footnote { font-size: 0.85rem; color: #777; margin-top: 16px; }
+        footer { background: #1a1a1a; color: #aaa; padding: 32px 0; text-align: center; font-size: 0.9rem; }
+        footer a { color: #ccc; text-decoration: none; }
+        footer a:hover { color: #fff; }
     </style>
 </head>
 <body>
-
-<!-- 내비게이션 -->
-<nav class="nav" aria-label="메인 내비게이션">
-    <div class="nav-inner">
-        <a href="/" class="nav-logo">마포셔츠룸</a>
-        <ul class="nav-links">
-            <li><a href="index.html">홈</a></li>
-            <li><a href="guide.html">가이드</a></li>
-            <li><a href="pricing.html">가격</a></li>
-            <li><a href="contact.html" class="active">문의</a></li>
-        </ul>
-    </div>
-</nav>
-
-<!-- 페이지 본문 -->
-<main class="page">
-    <header class="page-header">
-        <p class="page-label">Contact</p>
-        <h1 class="page-title">문의</h1>
-        <p class="page-subtitle">마포·합정 비즈니스 셔츠룸 — 편하게 연락 주세요</p>
+    <header>
+        <div class="nav-wrap">
+            <a href="/" class="logo">마포셔츠룸</a>
+            <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links" id="navLinks">
+                <a href="/">홈</a>
+                <a href="/guide">가이드</a>
+                <a href="/review">후기</a>
+                <a href="/contact">문의</a>
+            </nav>
+        </div>
     </header>
+    <main>
+        <div class="container">
+            <h1>문의 · 예약 · 오시는 길</h1>
+            <p class="subhead">궁금한 게 있으면 언제든 전화나 문자 주세요. 동네 형이 바로 받을게요. 예약은 간단하게, 까다롭지 않게.</p>
 
-    <!-- 연락처 카드 -->
-    <section class="card" aria-labelledby="contact-heading">
-        <h2 class="card-title" id="contact-heading">📞 연락처</h2>
-        <div class="card-row">
-            <span class="card-icon">📱</span>
-            <span><span class="card-highlight">050-XXXX-XXXX</span> (대표 번호)</span>
-        </div>
-        <div class="card-row">
-            <span class="card-icon">💬</span>
-            <span>카카오톡 ID: <span class="card-highlight">maposhirt_room</span></span>
-        </div>
-        <div class="card-row">
-            <span class="card-icon">📧</span>
-            <span>이메일: <span class="card-highlight">hello@maposhirt.kr</span></span>
-        </div>
-        <div style="margin-top: 14px;">
-            <span class="card-tag">실시간 상담</span>
-            <span class="card-tag">비밀 보장</span>
-            <span class="card-tag">당일 예약 가능</span>
-        </div>
-    </section>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>📞 전화 / 문자</h3>
+                    <p>10년차 운영, 직접 통화 가능합니다.</p>
+                    <a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a>
+                    <p style="margin-top:12px; font-size:0.9rem; color:#666;">오전 11시부터 새벽 2시까지 받아요. 늦은 시간도 편하게 연락주세요.</p>
+                </div>
+                <div class="contact-card">
+                    <h3>🕐 운영시간</h3>
+                    <div class="hours">
+                        <span>월~금</span><span>11:00 – 02:00</span>
+                        <span>토요일</span><span>11:00 – 03:00</span>
+                        <span>일요일</span><span>14:00 – 01:00</span>
+                        <span>공휴일</span><span>14:00 – 02:00</span>
+                    </div>
+                    <p style="margin-top:16px; font-size:0.9rem; color:#666;">※ 연장 운영 가능, 사전 문의 주세요.</p>
+                </div>
+            </div>
 
-    <!-- 운영시간 카드 -->
-    <section class="card" aria-labelledby="hours-heading">
-        <h2 class="card-title" id="hours-heading">🕐 운영시간</h2>
-        <table class="time-table">
-            <tbody>
-                <tr>
-                    <td>월요일 – 목요일</td>
-                    <td>19:00 – 03:00</td>
-                </tr>
-                <tr>
-                    <td>금요일</td>
-                    <td>19:00 – 05:00</td>
-                </tr>
-                <tr>
-                    <td>토요일</td>
-                    <td>18:00 – 05:00</td>
-                </tr>
-                <tr>
-                    <td>일요일</td>
-                    <td><span class="badge-closed">정기 휴무</span></td>
-                </tr>
-            </tbody>
-        </table>
-        <p class="form-hint" style="margin-top: 12px;">※ 공휴일은 전날 공지해 드려요. 카톡으로 미리 확인해 주시면 가장 정확합니다.</p>
-    </section>
+            <div class="contact-card" style="margin-bottom:48px;">
+                <h3>📍 위치</h3>
+                <p>서울 마포구 독막로 23길 18, 2층 (합정역 3번 출구 도보 4분)</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.123456789012!2d126.9112345678901!3d37.5512345678901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDMzJzA0LjQiTiAxMjbCsDU0JzQwLjUiRQ!5e0!3m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p style="margin-top:10px; font-size:0.9rem; color:#666;">건물 앞 공ᆼ영주차장 10m, 주차 대행 가능 (전화 요청)</p>
+            </div>
 
-    <!-- 오시는 길 카드 -->
-    <section class="card" aria-labelledby="location-heading">
-        <h2 class="card-title" id="location-heading">📍 오시는 길</h2>
-        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 14px; letter-spacing: -0.2px;">
-            <strong class="card-highlight">서울 마포구 합정동</strong> 인근 · 합정역 3번 출구 도보 4분<br>
-            상세 주소는 예약 확정 후 문자로 안내드립니다.
-        </p>
-        <div class="map-wrapper" aria-label="합정역 주변 지도">
-            <div class="map-placeholder">
-                <strong>🗺️ 합정역 3번 출구 인근</strong>
-                예약 확정 시<br>정확한 위치를 보내드려요
+            <h2>📋 실시간 예약</h2>
+            <div class="form-box">
+                <form action="#" method="post">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" placeholder="성함을 알려주세요" required>
+
+                    <label for="phone">연락처</label>
+                    <input type="tel" id="phone" name="phone" placeholder="010-0000-0000" required>
+
+                    <label for="people">인원</label>
+                    <select id="people" name="people">
+                        <option value="2">2명</option>
+                        <option value="3">3명</option>
+                        <option value="4" selected>4명</option>
+                        <option value="5">5명</option>
+                        <option value="6">6명</option>
+                        <option value="7">7명 이상</option>
+                    </select>
+
+                    <label for="date">희망 날짜</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="time">희망 시간</label>
+                    <input type="time" id="time" name="time" value="20:00" required>
+
+                    <label for="message">요청사항 (선택)</label>
+                    <textarea id="message" name="message" placeholder="특별한 자리인가요? 생일, 비즈니스, 또는 그냥 편하게…"></textarea>
+
+                    <button type="submit" class="btn-submit">예약 문의 보내기</button>
+                    <p class="footnote">* 예약 확인 문자를 보내드립니다. 늦어도 30분 내 답장.</p>
+                </form>
+            </div>
+
+            <h2>💬 자주 묻는 질문</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4>처음안데 분위기가 궁금해요</h4>
+                    <p>부담 없이 와요. 비즈니스 자리든 친구 모임이든, 형이 분위기 맞춰줄게. 과하지 않고 깔끔해.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>가격대가 어떻게 되나요?</h4>
+                    <p>기본 20만원대부터. 코스나 시간에 따라 탈라지니까 전화로 물어보는 게 가장 정확해. 형이 뻥 안 치고 알려줌.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>늦은 시간에도 예약 가능한가요?</h4>
+                    <p>가능해. 새벽 1시 넘어도 전화 줘. 문 열어놓고 기다릴게. 단, 너무 늦으면 미리 문자 주면 좋아.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>주차는 어떻게 하나요?</h4>
+                    <p>건물 앞 공영주차장 있ᆻ고, 자리 없으면 형한테 전화해. 발렛 대행해줄게. 걱정 마.</p>
+                </div>
             </div>
         </div>
-        <div style="margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
-            <span class="card-tag">🚇 합정역 3번 출구</span>
-            <span class="card-tag">🚶 도보 4분</span>
-            <span class="card-tag">🅿️ 주차 가능</span>
-            <span class="card-tag">🔒 프라이빗 입장</span>
+    </main>
+    <footer>
+        <div class="container">
+            <p>마포/합정 셔츠룸 · 10년차 동네 형이 운영합니다</p>
+            <p style="margin-top:8px;"><a href="tel:010-6279-0862">010-6279-0862</a> · 서울 마포구 독막로 23길 18 2층</p>
+            <p style="margin-top:12px; font-size:0.8rem;">과장 없는 경험담, 진짜 후기만 모았습니다.</p>
         </div>
-    </section>
-
-    <!-- 예약 폼 카드 -->
-    <section class="card" aria-labelledby="form-heading">
-        <h2 class="card-title" id="form-heading">📝 빠른 예약 문의</h2>
-        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px; letter-spacing: -0.2px;">
-            아래 폼을 작성해 주시면, 확인 즉시 카카오톡으로 연락드립니다.<br>
-            보통 10분 이내에 응답해 드리고 있어요 😊
-        </p>
-        <form>
-            <div class="form-group">
-                <label class="form-label" for="name">이름 <span class="required">*</span></label>
-                <input type="text" id="name" class="form-input" placeholder="성함 또는 닉네임" required>
+    </footer>
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

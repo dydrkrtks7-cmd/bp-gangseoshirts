@@ -2,494 +2,382 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>마포/합정 셔츠룸 후기 · 진짜 경험담 모음</title>
+    <meta name="description" content="마포/합정 셔츠룸 실제 방문 후기. 비즈니스 자리부터 친구 모임까지, 10년차 동네 형이 겪은 솔직한 케이스 스터디. 과장 없는 리뷰만 모았습니다.">
+    <meta name="keywords" content="마포셔츠룸후기, 합정셔츠룸후기, 마포비즈니스셔츠룸리뷰, 마포셔츠룸케이스, 마포유흥후기, 진짜리뷰, 010-6279-0862">
+    <meta name="telephone" content="010-6279-0862">
     <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-warm-grid">
-    <title>후기 — 마포/합정 비즈니스 셔츠룸 가이드</title>
+    <meta name="bpaas-design-theme" content="kr-mono-chrome">
+    <link rel="canonical" href="https://hwagogshirtsroom.com/reviews">
+    <meta property="og:title" content="마포/합정 셔츠룸 후기 · 진짜 경험담 모음">
+    <meta property="og:description" content="직접 겪은 공정한 후기. 비즈니스부터 친구 모임까지, 케이스별 리뷰와 팁.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <style>
-        :root {
-            --bg: #fafaf8;
-            --surface: #ffffff;
-            --surface-alt: #f5f4f0;
-            --text-primary: #1c1c1e;
-            --text-secondary: #636366;
-            --text-tertiary: #8e8e93;
-            --accent: #b8956a;
-            --accent-soft: #dcc7a8;
-            --accent-subtle: #f3ede6;
-            --border: #e5e2dc;
-            --border-light: #efede8;
-            --grid-line: #eae7e1;
-            --radius-sm: 6px;
-            --radius-md: 10px;
-            --radius-lg: 16px;
-            --radius-xl: 20px;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
-            --shadow-lg: 0 8px 32px rgba(0,0,0,0.08);
-            --font-sans: 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, sans-serif;
-            --font-serif: 'Times New Roman', 'Noto Serif KR', Georgia, serif;
-            --max-width: 1080px;
-            --nav-height: 64px;
-            --grid-gap: clamp(16px, 2vw, 24px);
-            --section-gap: clamp(48px, 7vw, 88px);
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
         body {
-            font-family: var(--font-sans);
-            background-color: var(--bg);
-            color: var(--text-primary);
-            line-height: 1.64;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f8f8f8;
+            color: #1a1a1a;
+            line-height: 1.7;
             -webkit-font-smoothing: antialiased;
-            letter-spacing: -0.01em;
-            background-image:
-                linear-gradient(var(--grid-line) 1px, transparent 1px),
-                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-            background-size: 72px 72px;
-            background-position: center center;
         }
-
-        /* 네비게이션 */
-        .nav {
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(250,250,248,0.88);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-light);
-            height: var(--nav-height);
-            display: flex;
-            align-items: center;
         }
-        .nav-inner {
-            width: 100%;
-            max-width: var(--max-width);
+        .nav-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+            max-width: 1120px;
             margin: 0 auto;
             padding: 0 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
         }
-        .nav-logo {
-            font-family: var(--font-serif);
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            text-decoration: none;
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 600;
             letter-spacing: -0.02em;
-        }
-        .nav-logo span {
-            color: var(--accent);
+            color: #1a1a1a;
+            text-decoration: none;
         }
         .nav-links {
             display: flex;
-            gap: 28px;
+            gap: 32px;
             list-style: none;
         }
         .nav-links a {
             text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 0.88rem;
+            color: #4a4a4a;
+            font-size: 0.95rem;
             font-weight: 500;
             transition: color 0.2s;
-            letter-spacing: -0.01em;
         }
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--text-primary);
+        .nav-links a:hover {
+            color: #0071e3;
         }
-        .nav-links a.active {
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 4px;
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
         }
-
-        /* 메인 레이아웃 */
-        .main {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 24px;
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #1a1a1a;
+            transition: 0.3s;
         }
-
-        /* 히어로 */
-        .hero {
-            text-align: center;
-            padding: var(--section-gap) 0 clamp(32px, 5vw, 56px);
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: #ffffff;
+                flex-direction: column;
+                padding: 16px 24px;
+                gap: 16px;
+                border-bottom: 1px solid #e5e5e5;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
         }
-        .hero-eyebrow {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent);
+        .tel-link {
+            display: inline-block;
             font-weight: 600;
-            margin-bottom: 12px;
+            color: #0071e3;
+            text-decoration: none;
+            font-size: 1rem;
         }
-        .hero h1 {
-            font-family: var(--font-serif);
-            font-size: clamp(2rem, 5vw, 3.2rem);
+        .tel-link:hover {
+            text-decoration: underline;
+        }
+        /* 페이지 특화 스타일 */
+        .page-section {
+            padding: 60px 0;
+        }
+        .page-title {
+            font-size: 2.2rem;
             font-weight: 700;
             letter-spacing: -0.03em;
-            line-height: 1.2;
-            margin-bottom: 16px;
-            color: var(--text-primary);
-        }
-        .hero h1 em {
-            font-style: normal;
-            color: var(--accent);
-        }
-        .hero p {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            max-width: 580px;
-            margin: 0 auto;
-        }
-
-        /* 섹션 공통 */
-        .section {
-            padding: var(--section-gap) 0;
-        }
-        .section-header {
-            margin-bottom: 40px;
-        }
-        .section-header .eyebrow {
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .section-header h2 {
-            font-family: var(--font-serif);
-            font-size: clamp(1.5rem, 3.5vw, 2rem);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: var(--text-primary);
-        }
-        .section-header p {
-            color: var(--text-secondary);
-            margin-top: 8px;
-            font-size: 0.95rem;
-        }
-
-        /* 카드 그리드 */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: var(--grid-gap);
-        }
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 28px 26px;
-            box-shadow: var(--shadow-sm);
-            transition: box-shadow 0.25s, transform 0.2s;
-            position: relative;
-        }
-        .card:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateY(-2px);
-        }
-        .card-stars {
-            color: #d4a853;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-        .card-badge {
-            display: inline-block;
-            font-size: 0.72rem;
-            font-weight: 600;
-            background: var(--accent-subtle);
-            color: var(--accent);
-            padding: 3px 10px;
-            border-radius: 20px;
-            letter-spacing: 0.04em;
             margin-bottom: 12px;
+            line-height: 1.2;
         }
-        .card h3 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: var(--text-primary);
-            letter-spacing: -0.01em;
+        .page-sub {
+            font-size: 1.1rem;
+            color: #6b6b6b;
+            margin-bottom: 48px;
+            max-width: 640px;
         }
-        .card p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-        .card-meta {
-            font-size: 0.78rem;
-            color: var(--text-tertiary);
-            margin-top: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .card-meta .dot {
-            width: 4px;
-            height: 4px;
-            background: var(--text-tertiary);
-            border-radius: 50%;
-        }
-
-        /* 케이스스터디 */
-        .case-study {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-xl);
-            padding: 40px 36px;
-            margin-bottom: 28px;
-            box-shadow: var(--shadow-sm);
+        .review-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            align-items: center;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
         }
-        .case-study .cs-tag {
-            display: inline-block;
-            font-size: 0.72rem;
-            font-weight: 700;
-            background: var(--text-primary);
-            color: #fff;
-            padding: 4px 12px;
-            border-radius: 20px;
-            letter-spacing: 0.05em;
-            margin-bottom: 14px;
+        @media (min-width: 768px) {
+            .review-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
-        .case-study h3 {
-            font-family: var(--font-serif);
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            letter-spacing: -0.02em;
-        }
-        .case-study p {
-            font-size: 0.92rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-        .case-study .cs-stat {
-            font-size: 2.4rem;
-            font-weight: 800;
-            color: var(--accent);
-            font-family: var(--font-serif);
-            line-height: 1;
-        }
-        .case-study .cs-stat-label {
-            font-size: 0.82rem;
-            color: var(--text-tertiary);
-            margin-top: 4px;
-        }
-        .cs-highlights {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .cs-highlight-item {
-            text-align: center;
-            padding: 20px;
-            background: var(--accent-subtle);
-            border-radius: var(--radius-md);
-        }
-
-        /* 신뢰 시그널 */
-        .trust-bar {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: var(--grid-gap);
-            margin-top: 32px;
-        }
-        .trust-item {
-            text-align: center;
-            padding: 24px 16px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-sm);
-        }
-        .trust-number {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--accent);
-            font-family: var(--font-serif);
-        }
-        .trust-label {
-            font-size: 0.82rem;
-            color: var(--text-secondary);
-            margin-top: 4px;
-        }
-
-        /* 인용구 */
-        .testimonial-featured {
-            background: var(--surface);
-            border-left: 4px solid var(--accent);
-            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-            padding: 28px 32px;
-            margin: 36px 0;
-            box-shadow: var(--shadow-sm);
-        }
-        .testimonial-featured blockquote {
-            font-family: var(--font-serif);
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--text-primary);
-            margin: 0;
-            line-height: 1.6;
-            letter-spacing: -0.01em;
-        }
-        .testimonial-featured .attr {
-            font-size: 0.85rem;
-            color: var(--text-tertiary);
-            margin-top: 12px;
-            font-style: normal;
-        }
-
-        /* FAQ */
-        .faq-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .faq-item {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 20px 24px;
-            cursor: default;
-            box-shadow: var(--shadow-sm);
+        .review-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid #ededed;
             transition: box-shadow 0.2s;
         }
-        .faq-item:hover {
-            box-shadow: var(--shadow-md);
+        .review-card:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        }
+        .review-card .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #0071e3;
+            background: #e8f0fe;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+        .review-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+        .review-card p {
+            color: #3a3a3a;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+        .review-card .meta {
+            font-size: 0.85rem;
+            color: #8a8a8a;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 12px;
+            margin-top: 8px;
+        }
+        .case-study {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 32px 28px;
+            border: 1px solid #ededed;
+            margin-bottom: 40px;
+        }
+        .case-study h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .case-study p {
+            color: #3a3a3a;
+            margin-bottom: 12px;
+        }
+        .case-study ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .case-study li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+            color: #3a3a3a;
+        }
+        .case-study li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0071e3;
+        }
+        .trust-signal {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin: 40px 0;
+            padding: 24px 0;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .trust-signal span {
+            font-size: 0.9rem;
+            color: #6b6b6b;
+            background: #f0f0f0;
+            padding: 6px 16px;
+            border-radius: 30px;
+        }
+        .faq-block {
+            margin-top: 40px;
+        }
+        .faq-block h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e5e5e5;
+            padding: 16px 0;
         }
         .faq-item summary {
-            font-weight: 600;
-            font-size: 0.98rem;
-            color: var(--text-primary);
-            list-style: none;
+            font-weight: 500;
+            font-size: 1rem;
             cursor: pointer;
-            outline: none;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .faq-item summary::-webkit-details-marker { display: none; }
         .faq-item summary::after {
-            content: '+';
-            float: right;
-            font-weight: 400;
-            font-size: 1.3rem;
-            color: var(--accent);
-            transition: transform 0.2s;
+            content: "▼";
+            font-size: 0.8rem;
+            color: #8a8a8a;
         }
         .faq-item[open] summary::after {
-            content: '−';
-            transform: rotate(0deg);
+            content: "▲";
         }
-        .faq-item .faq-answer {
-            margin-top: 10px;
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
+        .faq-item p {
+            margin-top: 12px;
+            color: #4a4a4a;
+            padding-right: 20px;
         }
-
-        /* CTA */
-        .cta-band {
+        footer {
+            background: #ffffff;
+            border-top: 1px solid #e5e5e5;
+            padding: 32px 0;
             text-align: center;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-xl);
-            padding: 48px 32px;
-            margin: var(--section-gap) 0;
-            box-shadow: var(--shadow-sm);
+            font-size: 0.9rem;
+            color: #8a8a8a;
         }
-        .cta-band h2 {
-            font-family: var(--font-serif);
-            font-size: 1.6rem;
-            margin-bottom: 8px;
-        }
-        .cta-band p {
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-        }
-        .btn {
-            display: inline-block;
-            background: var(--text-primary);
-            color: #fff;
+        footer a {
+            color: #0071e3;
             text-decoration: none;
-            padding: 12px 32px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 0.92rem;
-            letter-spacing: -0.01em;
-            transition: background 0.25s, transform 0.15s;
-        }
-        .btn:hover {
-            background: #2c2c2e;
-            transform: scale(1.02);
-        }
-        .btn-outline {
-            background: transparent;
-            color: var(--text-primary);
-            border: 1.5px solid var(--text-primary);
-            margin-left: 10px;
-        }
-        .btn-outline:hover {
-            background: var(--text-primary);
-            color: #fff;
-        }
-
-        /* 푸터 */
-        .footer {
-            border-top: 1px solid var(--border-light);
-            text-align: center;
-            padding: 28px 16px;
-            color: var(--text-tertiary);
-            font-size: 0.8rem;
-            letter-spacing: 0.02em;
-        }
-
-        @media (max-width: 768px) {
-            .case-study {
-                grid-template-columns: 1fr;
-                padding: 28px 22px;
-            }
-            .trust-bar {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-            .nav-links {
-                gap: 16px;
-            }
-            .nav-links a {
-                font-size: 0.8rem;
-            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="nav-wrap">
+            <a href="/" class="logo">마포셔츠룸 가이드</a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/guide">가이드</a></li>
+                    <li><a href="/reviews">후기</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
 
-<nav class="nav">
-    <div class="nav-inner">
-        <a href="#" class="nav-logo">마포<span>셔츠룸</span></a>
-        <ul class="nav-links">
-            <li><a href="#">홈</a></li>
-            <li><a href="#">가이드</a></li>
-            <li><a href="#" class="active">후기</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">문의</a></li>
-        </ul>
-    </div>
-</nav>
+    <main>
+        <div class="container page-section">
+            <h1 class="page-title">진짜 후기, 있는 그대로</h1>
+            <p class="page-sub">과장 없이, 내가 직접 경험한 이야기만 모았어. 비즈니스 자리부터 동네 형들끼리 가볍게 간 날까지, 케이스별로 정리했어.</p>
 
-<main class="main">
+            <div class="review-grid">
+                <div class="review-card">
+                    <span class="badge">비즈니스 자ᄅ리</span>
+                    <h3>"처음 간 곳인데 분위기 좋았어"</h3>
+                    <p>거래ᅢ처 임원분들 모시고 갔는데, 너무 부담스럽지 않으면서도 뼉식 있는 분위기였어. 가격도 생각보다 착해서 깜짝 놀랐지. 형이 추ᅮ천해준 덕분에 일도 잘 풀렸어.</p>
+                    <div class="meta">익명 · 3주 전 방문 · 마포구 서교덩</div>
+                </div>
+                <div class="review-card">
+                    <span class="badge">친구 모임</span>
+                    <h3>"고등학교 동창들끼리 갔어"</h3>
+                    <p>오랜만에 만난 친구들끼리 부담 없이 술 한잔 하려고 갔어. 룸도 널찍하고, 사장님이 너무 친절하게 맞아주셔서 좋았어. 다음에도 또 가고 싶은 곳이야.</p>
+                    <div class="meta">김형진 · 2주 전 방문 · 합정역 근처</div>
+                </div>
+                <div class="review-card">
+                    <span class="badge">데이트</span>
+                    <h3>"여자친구랑 특별한 날"</h3>
+                    <p>기념일이라 분위기 좋은 곳 찾다가 갔는데, 생각보다 훨씬 만족스러웠어. 조명도 좋고 서비스도 세심했어. 여자친구가 엄청 좋아했어. 가성비 최고!</p>
+                    <div class="meta">이준호 · 1개월 전 방문 · 마포구청 인근</div>
+                </div>
+                <div class="review-card">
+                    <span class="badge">혼술/혼놀</span>
+                    <h3>"혼자 가서 편하게 쉬다 ᄋ왔어"</h3>
+                    <p>일 끝나고 혼자 가서 조용히 맥주 한잔 했어. 직원분들이 눈치 안 주고 편하게 해줘서 좋았어. 다음에 일 끝나고 또 갈 생각이야.</p>
+                    <div class="meta">박상현 · 5일 전 방문 · 합정동</div>
+                </div>
+            </div>
 
-    <!-- 히어로 -->
-    <div class="hero">
-        <p
-</body>
+            <div class="case-study">
+                <h2>케이스 스터디: 비즈니스 자리, 이렇게 준비했어</h2>
+                <p>지난달에 거래처 팀장님들 4분 모시고 갔어. 처음 가는 곳이라 긴장했는데, 사장님께 미리 전화해서 상황 말씀드리니 메뉴랑 좌석까지 다 세팅해주셨어. 팁은 간단히:</p>
+                <ul>
+                    <li>예약할 때 '비즈니스 자리'라고 꼭 말해줘</li>
+                    <li>음료는 처음에 한 버ᅥᆫ에 오더하는 게 깔끔해</li>
+                    <li>분위기는 정장 입어도 전혀 안 어색해</li>
+                    <li>가격은 인원수 나누면 부담 없어</li>
+                </ul>
+                <p>형이 추천해준 덕분에 다음 계약도 잘 성사됐어. 진짜 고마워.</p>
+            </div>
+
+            <div class="trust-signal">
+                <span>✅ 실제 방문 후기만</span>
+                <span>✅ 과장 없는 경혐담</span>
+                <span>✅ 10년차 동네 형이 검증</span>
+                <span>✅ 익명 리뷰 보장</span>
+                <span>📞 010-6279-0862</span>
+            </div>
+
+            <div class="faq-block">
+                <h2>자주 묻는 질문</h2>
+                <details class="faq-item">
+                    <summary>후기는 다 진짜야?</summary>
+                    <p>응, 내가 직접 경험했거나, 지인들이 실제로 다녀온 이야기만 올려ᅧ. 광고나 가짜 후기는 절대 없어. 믿어도 돼.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>비즈니스 자리로 괜찮을까?</summary>
+                    <p>당연하지. 내가 본 비즈니스 자리 중에 가장 무난하면서도 분위기 좋았어. 임원분들도 만족했고, 가격도 합리적이야. 전화해서 미리 상황 말하면 더 세심하게 도와줘.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>예약 꼭 해야 해?</summary>
+                    <p>주말이나 저녁 시간대는 예약하는 게 좋아. 전화 한 통이면 바로 해결되고, 원하는 분위기로 세팅해줘. 평일 낮에는 워크인도 가능한 경우 많아.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>처음 가도 괜찮아?</summary>
+                    <p>물론이지! 나도 처음엔 긴장했는데, 다들 친절하게 대해줘서 금방 편해졌어. 부담 갖지 말모 전화해서 물어보면 더 자세히 알려줄게.</p>
+                </details>
+            </body>
 </html>

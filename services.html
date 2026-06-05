@@ -1,487 +1,230 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-warm-grid">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>서비스 | 마포/합정 비즈니스 셔츠룸 가이드</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>마포/합정 셔츠룸 서비스 & 가격 안내 · 합리적인 비즈니스 자리</title>
+    <meta name="description" content="마포/합정 셔츠룸에서 제공하는 서비스와 가격을 투명하게 공개합니다. 음료, 안주, 시스템까지 — 형이 직접 경험한 그대로 알려드려요.">
+    <meta name="keywords" content="마포셔츠룸가격, 합정셔츠룸서비스, 마포비즈니스셔츠룸가격표, 마포셔츠룸안주, 마포유흥가격, 마포가성비셔츠룸, 010-6279-0862">
+    <meta name="telephone" content="010-6279-0862">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-mono-chrome">
+    <link rel="canonical" href="https://hwagogshirtsroom.com/services">
+    <meta property="og:title" content="마포/합정 셔츠룸 서비스 & 가격 · 형이 솔직하게 알려주는 비용">
+    <meta property="og:description" content="10년차 동네 형이 직접 경험한 마포 셔츠룸 서비스와 가격을 그대로 공개합니다. 과장 광고는 빼고, 진짜 필요한 정보만 쏙쏙.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="마포/합정 셔츠룸 서비스 & 가격 · 형이 솔직하게 알려주는 비용">
     <style>
-        :root {
-            --bg: #fafaf8;
-            --surface: #ffffff;
-            --text: #1a1a1a;
-            --text-muted: #6b6b6b;
-            --accent: #2c3e50;
-            --accent-soft: #e8ecf1;
-            --border: #e0e0dc;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
-            --radius-sm: 8px;
-            --radius-md: 14px;
-            --radius-lg: 20px;
-            --font-sans: 'Inter', 'Apple SD Gothic Neo', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
-            --max-width: 1080px;
-            --spacing-xs: 6px;
-            --spacing-sm: 12px;
-            --spacing-md: 20px;
-            --spacing-lg: 32px;
-            --spacing-xl: 48px;
-            --spacing-2xl: 72px;
+        /* reset + 기본 설정 */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #fafafa; color: #1d1d1f; line-height: 1.6; }
+        /* grid / container */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        /* 헤더 / 네비게이셔ᄖ */
+        header { background-color: #ffffff; border-bottom: 1px solid #e5e5ea; position: sticky; top: 0; z-index: 100; }
+        .nav-wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; padding: 0 20px; max-width: 1200px; margin: 0 auto; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1d1d1f; text-decoration: none; letter-spacing: -0.02em; }
+        .nav-links { display: flex; gap: 28px; list-style: none; }
+        .nav-links a { text-decoration: none; color: #3a3a3c; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #007aff; }
+        /* 햄버거 모바일 */
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; padding: 5px; }
+        .hamburger span { width: 24px; height: 2.5px; background-color: #1d1d1f; border-radius: 2px; transition: all 0.3s; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background: #ffffff; border-bottom: 1px solid #e5e5ea; padding: 20px; gap: 16px; }
+            .nav-links.active { display: flex; }
+            .hamburger { display: flex; }
         }
+        /* 텔 링크 */
+        .tel-link { color: #007aff; font-weight: 600; text-decoration: none; }
+        .tel-link:hover { text-decoration: underline; }
+        /* 메인 콘텐츠 */
+        .page-title { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.03em; margin: 60px 0 20px; line-height: 1.2; }
+        .page-subtitle { font-size: 1.1rem; color: #6e6e73; margin-bottom: 48px; max-width: 720px; }
+        .section-heading { font-size: 1.6rem; font-weight: 600; margin: 48px 0 24px; letter-spacing: -0.02em; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 48px; }
+        .card { background: #ffffff; border-radius: 16px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); border: 1px solid #e5e5ea; transition: transform 0.2s, box-shadow 0.2s; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+        .card h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; }
+        .card p { color: #3a3a3c; margin-bottom: 8px; font-size: 0.95rem; }
+        .card .price { font-size: 1.4rem; font-weight: 700; color: #1d1d1f; margin: 16px 0 8px; }
+        .price-table { width: 100%; border-collapse: collapse; margin: 40px 0; background: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.04); border: 1px solid #e5e5ea; }
+        .price-table th, .price-table td { padding: 16px 20px; text-align: left; border-bottom: 1px solid #e5e5ea; }
+        .price-table th { background: #f5f5f7; font-weight: 600; color: #1d1d1f; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .price-table td { font-size: 0.95rem; color: #3a3a3c; }
+        .price-table tr:last-child td { border-bottom: none; }
+        .price-table .highlight { background: #f0f7ff; }
+        .badge { display: inline-block; background: #e8f0fe; color: #007aff; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500; }
+        .faq-item { border-bottom: 1px solid #e5e5ea; padding: 20px 0; }
+        .faq-item h4 { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; cursor: pointer; }
+        .faq-item p { color: #3a3a3c; font-size: 0.95rem; }
+        .cta-box { background: #1d1d1f; color: #ffffff; border-radius: 16px; padding: 40px; text-align: center; margin: 48px 0; }
+        .cta-box h3 { font-size: 1.6rem; font-weight: 600; margin-bottom: 12px; }
+        .cta-box p { color: #a1a1a6; margin-bottom: 24px; }
+        .cta-box .tel-link { color: #ffffff; background: #007aff; padding: 12px 32px; border-radius: 40px; display: inline-block; font-size: 1.1rem; }
+        .cta-box .tel-link:hover { background: #0056cc; text-decoration: none; }
+        footer { text-align: center; padding: 40px 20px; color: #6e6e73; font-size: 0.85rem; border-top: 1px solid #e5e5ea; margin-top: 60px; }
+        @media (max-width: 768px) {
+            .page-title { font-size: 1.7rem; margin-top: 40px; }
+            .section-heading { font-size: 1.3rem; }
+            .card-grid { grid-template-columns: 1fr; }
+            .cta-box { padding: 28px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-wrap">
+            <a href="/" class="logo">셔츠룸 가이드</a>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/services">서비스</a></li>
+                <li><a href="/review">후기</a></li>
+                <li><a href="/contact">문의</a></li>
+            </ul>
+        </div>
+    </header>
 
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    <main class="container">
+        <h1 class="page-title">서비스 & 가격<br>형이 직접 확이ᅵᆫ한 그대로</h1>
+        <p class="page-subtitle">마포와 합정에서 실제로 운영 중인 셔츠룸들의 서비스와 비용을 정리했어. 과장 광고는 빼고, 내가 겪은 그대로 알려줄게. 궁금한 건 전화로 물어봐도 돼.</p>
 
-        html {
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+        <section>
+            <h2 class="section-heading">📋 기본 서비스 구성</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>🍹 음료 & 안주</h3>
+                    <p>기본 양주(스카치, 버번) or 맥주, 고급 안주 플레이트 포함. 추가 주문 시 별도 비용 발생할 수 있어.</p>
+                    <p class="price">기본 포함</p>
+                    <span class="badge">대부분 업소 기본</span>
+                </div>
+                <div class="card">
+                    <h3>🎤 룸 시스템</h3>
+                    <p>프라이빗 룸, 최신 사운드, 무료 노래방 기능. 비즈니스 미팅이나 조용한 대화도 가능하게 방음 잘 돼 있어.</p>
+                    <p class="price">시간당 5만~8만</p>
+                    <span class="badge">룸 크기별 싱이</span>
+                </div>
+                <div class="card">
+                    <h3>👔 비즈니스 케어</h3>
+                    <p>넥타이, 와이셔츠 관리 서비스. 접대 자리에서 옷 핏 신경 쓰이는 사람한테 딱이야. 추가 비용 없음.</p>
+                    <p class="price">무료</p>
+                    <span class="badge">일부 업소 한정</span>
+                </div>
+            </div>
+        </section>
 
-        body {
-            font-family: var(--font-sans);
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            letter-spacing: -0.01em;
-            min-height: 100vh;
-        }
+<!-- SEO Visual 2: 셔츠룸 Cardless Editorial List -->
+<div class="seo-visual-cards" role="img" aria-label="마포/합정 비즈니스 셔츠룸 가이드 셔츠룸 — 강남 셔츠룸 정보" 
+     style="display:flex;flex-direction:column;gap:0;margin:40px 0;border-top:1px solid #e5e5e0;border-bottom:1px solid #e5e5e0;background:#faf9f6">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 01 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">특화</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">마포/합정 비즈니스 셔츠룸 가이드</span>
+  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 02 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">다수 실적</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">마포/합정 비즈니스 셔츠룸 가이드</span>
+  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:none;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 03 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">고품질</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">마포/합정 비즈니스 셔츠룸 가이드</span>
+  </div>
+</div>
 
-        /* Navigation */
-        .nav-container {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(250,250,248,0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--border);
-            transition: all 0.25s ease;
-        }
+        <section>
+            <h2 class="section-heading">💰 가격 테이블 (실제 견적 기준)</h2>
+            <p style="color:#6e6e73; margin-bottom:8px;">아래 가격은 내가 직접 물어보고 확인한 금액이야. 시즌이나 시간대에 따라 조금씩 달라질 수 있으니 참고만 해줘.</p>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>항목</th>
+                        <th>마포 지역</th>
+                        <th>합정 지역</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>기본 2시간 (양주 포함)</td>
+                        <td>15만~20만원</td>
+                        <td>13만~18만원</td>
+                        <td>룸 크기, 안주 수준 따라 변동</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>비즈니스 패키지 (4시간, 고급 양주 + 안주)</td>
+                        <td>30만~38만원</td>
+                        <td>28만~35만원</td>
+                        <td>접대용으로 가장 많이 선택</td>
+                    </tr>
+                    <tr>
+                        <td>추가 1시간 연장</td>
+                        <td>5만~7만원</td>
+                        <td>4만~6만원</td>
+                        <td>음료 리필 포함</td>
+                    </tr>
+                    <tr>
+                        <td>VIP 룸 (8인 이상, 별도 안주)</td>
+                        <td>50만~65만원</td>
+                        <td>45만~60만원</td>
+                        <td>사전 예약 필수</td>
+                    </tr>
+                    <tr>
+                        <td>노래방 추가 이용</td>
+                        <td>무료</td>
+                        <td>무료</td>
+                        <td>기본 서비스에 포함</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="color:#6e6e73; font-size:0.9rem;">※ 위 가격은 2025년 3월 기준이며, 업소마다 차이가 있ᄋ을 수 있어. 확실한 건 전화로 확인하는 게 가장 정확해.</p>
+        </section>
 
-        .nav-inner {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 14px var(--spacing-md);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: var(--spacing-md);
-        }
+        <section>
+            <h2 class="section-heading">🔍 서비스 비교 & 꿀팁</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>마포 vs 합정</h3>
+                    <p>마포 쪽은 좀 더 비즈니스 분위기에 특화된 곳이 많고, 합정은 상대적으로 가격이 착하면서도 분위기가 좋은 편이야. 나는 합정 쪽을 개인적으로 더 자주 가는 편.</p>
+                    <span class="badge">내 경험</span>
+                </div>
+                <div class="card">
+                    <h3>시간대별 팁</h3>
+                    <p>평일 오후 6시 전에 입장하면 기본 요금에서 10~20% 할인해주는 곳이 꽤 있어. 저녁 8시 이후는 풀요금이니까 참고해.</p>
+                    <span class="badge">알뜰 팁</span>
+                </div>
+                <div class="card">
+                    <h3>예약 필수?</h3>
+                    <p>주말이나 연말에는 무조건 예약해야 자리 나더라. 전화 한 통이면 되니까 부담 없이 물어봐.</p>
+                    <span class="badge">필수 체크</span>
+                </div>
+            </div>
+        
+<div class="seo-visual-divider" role="separator" aria-label="마포/합정 비즈니스 셔츠룸 가이드 구분선" style="margin:32px 0;text-align:center;color:#e5e5e0;font-size:0.85rem;letter-spacing:0.5em">◆ ◆ ◆</div>
+</section>
 
-        .nav-logo {
-            font-weight: 700;
-            font-size: 1.1rem;
-            letter-spacing: -0.02em;
-            color: var(--accent);
-            text-decoration: none;
-            white-space: nowrap;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .nav-logo-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--accent);
-            flex-shrink: 0;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: var(--spacing-xs);
-            list-style: none;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 8px 14px;
-            border-radius: 20px;
-            transition: all 0.2s ease;
-            white-space: nowrap;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--accent);
-            background: var(--accent-soft);
-        }
-
-        .nav-links a.active {
-            font-weight: 600;
-        }
-
-        /* Page Header */
-        .page-header {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: var(--spacing-2xl) var(--spacing-md) var(--spacing-xl);
-            text-align: center;
-        }
-
-        .page-header .overline {
-            display: inline-block;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: var(--accent);
-            background: var(--accent-soft);
-            padding: 6px 16px;
-            border-radius: 20px;
-            margin-bottom: var(--spacing-md);
-        }
-
-        .page-header h1 {
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.2;
-            margin-bottom: var(--spacing-sm);
-            color: var(--text);
-        }
-
-        .page-header .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        /* Main Content */
-        .main-content {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 var(--spacing-md) var(--spacing-2xl);
-        }
-
-        /* Section Titles */
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: var(--spacing-xs);
-            color: var(--text);
-        }
-
-        .section-subtitle {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: var(--spacing-lg);
-            line-height: 1.5;
-        }
-
-        /* Cards Grid */
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-2xl);
-        }
-
-        .card {
-            background: var(--surface);
-            border-radius: var(--radius-md);
-            padding: var(--spacing-lg);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border);
-            transition: all 0.25s ease;
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-sm);
-        }
-
-        .card:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateY(-2px);
-        }
-
-        .card-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: var(--radius-sm);
-            background: var(--accent-soft);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            flex-shrink: 0;
-        }
-
-        .card h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            letter-spacing: -0.01em;
-            color: var(--text);
-        }
-
-        .card p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-            flex-grow: 1;
-        }
-
-        .card .tag {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 12px;
-            background: var(--accent-soft);
-            color: var(--accent);
-            align-self: flex-start;
-        }
-
-        /* Anecdote Block */
-        .anecdote-block {
-            background: var(--surface);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-xl);
-            margin-bottom: var(--spacing-2xl);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .anecdote-block::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: var(--accent);
-            border-radius: 0 4px 4px 0;
-        }
-
-        .anecdote-block .quote-mark {
-            font-size: 3rem;
-            line-height: 1;
-            color: var(--accent-soft);
-            font-weight: 800;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .anecdote-block p {
-            font-size: 1rem;
-            color: var(--text);
-            line-height: 1.7;
-            font-style: italic;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .anecdote-block .author {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-weight: 600;
-            font-style: normal;
-        }
-
-        /* Pricing Table */
-        .pricing-table-wrapper {
-            overflow-x: auto;
-            margin-bottom: var(--spacing-2xl);
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .pricing-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            background: var(--surface);
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border);
-            min-width: 640px;
-        }
-
-        .pricing-table thead th {
-            background: var(--accent);
-            color: #ffffff;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-            padding: 16px 20px;
-            text-align: center;
-            white-space: nowrap;
-        }
-
-        .pricing-table thead th:first-child {
-            text-align: left;
-            border-radius: var(--radius-md) 0 0 0;
-        }
-
-        .pricing-table thead th:last-child {
-            border-radius: 0 var(--radius-md) 0 0;
-        }
-
-        .pricing-table tbody td {
-            padding: 14px 20px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text);
-            border-bottom: 1px solid var(--border);
-            white-space: nowrap;
-        }
-
-        .pricing-table tbody td:first-child {
-            text-align: left;
-            font-weight: 600;
-            color: var(--accent);
-        }
-
-        .pricing-table tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        .pricing-table tbody tr:nth-child(even) {
-            background: #fcfcfb;
-        }
-
-        .pricing-table tbody tr:hover {
-            background: var(--accent-soft);
-            transition: background 0.2s ease;
-        }
-
-        .price-highlight {
-            font-weight: 700;
-            color: var(--accent);
-            font-size: 1rem;
-        }
-
-        .price-note {
-            display: block;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            margin-top: 2px;
-        }
-
-        /* Comparison Section */
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-2xl);
-        }
-
-        .comparison-card {
-            background: var(--surface);
-            border-radius: var(--radius-md);
-            padding: var(--spacing-lg);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .comparison-card.recommended {
-            border: 2px solid var(--accent);
-            position: relative;
-        }
-
-        .comparison-card.recommended::after {
-            content: '추천';
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background: var(--accent);
-            color: #fff;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 4px 14px;
-            border-radius: 12px;
-            letter-spacing: 0.04em;
-        }
-
-        .comparison-card h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: var(--spacing-sm);
-            color: var(--text);
-        }
-
-        .comparison-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .comparison-list li {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            padding: 8px 0;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .comparison-list li:last-child {
-            border-bottom: none;
-        }
-
-        .icon-check {
-            color: #2e7d32;
-            font-weight: 700;
-            font-size: 1rem;
-        }
-        .icon-x {
-            color: #c62828;
-            font-weight: 700;
-            font-size: 1rem;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            margin-bottom: var(--spacing-2xl);
-        }
-
-        .faq-item {
-            background: var(--surface);
-            border-radius: var(--radius-md);
-            padding: var(--spacing-lg);
-            margin-bottom: var(--spacing-sm);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
-            transition: all 0.2s ease;
-        }
-
-        .faq-item:hover {
-            box-shadow: var(--shadow-md);
-        }
-
-        .faq-item h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-            color: var(--text);
-            cursor: default;
-        }
-
-        .faq-item p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        /* Footer */
-        .
+        <section>
+            <h2 class="section-heading">❓ 자주 묻는 질문</h2>
+            <div class="faq-item">
+                <h4>처음 가도 괜찮을까? 분위기는 어떤 편이야?</h4>
+                <p>당연하지. 나도 처음엔 긴장했는데, 막상 가보니 직원분들이 친절하게 시스템 설명해주고 부담 없더라. 비즈니스 자리든 친구 모임ᄋ이든 편하게 즐길 수 있어.</p>
+            </div>
+            <div class="faq-item">
+                <h4>가격이 너무 비싼 거 아니야? 다른 데랑 비교하면?</h4>
+                <p>솔직히 강남 쪽보다는 확실히 저렴해. 같은 서비스에 강남은 기본 25만 이상인데, 여기는 15만부터 시작하니까 가성비 괜찮은 편이야.</p>
+            </div>
+            <div class="faq-item">
+                <h4>혼자 가도 돼? 아니면 최소 인원 있어?</h4>
+                <p>2명 이상이
 </body>
 </html>
